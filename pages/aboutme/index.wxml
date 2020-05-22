@@ -1,0 +1,76 @@
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+  <cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+    <view slot="backText">返回</view>
+    <view slot="content">我的收藏</view>
+  </cu-custom>
+ 
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">资源名称</view>
+		<input placeholder="请输入资源名称关键字"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">学科或种类</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+			请选择
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">课程或者文件夹</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+			请选择
+			</view>
+		</picker>
+	</view>
+</form>
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-green "></text> 资源列表
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="menuModal">查询</button>
+    </view>
+  </view>
+
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item ">
+      <view class="content">
+        <text class="cuIcon-tagfill text-green"></text>
+        <text class="text-grey">标签</text>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+		
+    <view class="cu-item ">
+      <view class="content">
+        <text class="cuIcon-tagfill text-green"></text>
+        <text class="text-grey">标签</text>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+		
+    <view class="cu-item ">
+      <view class="content">
+        <text class="cuIcon-tagfill text-green"></text>
+        <text class="text-grey">标签</text>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+   </view>
+</scroll-view>
+

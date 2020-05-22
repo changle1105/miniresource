@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/homepage/index",
+    "pages/hot/index",
+    "pages/list/index",
+    "pages/detail/index",
+    "pages/logs/logs",
+    "pages/mostech/index",
+    "pages/aboutme/index",
+    "pages/statistic/index",
+    "pages/history/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#383838",
+    "color": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/homepage/index",
+        "text": "主页",
+        "iconPath": "images/tabbar/component.png",
+        "selectedIconPath": "images/tabbar/component_cur.png"
+      },
+      {
+        "pagePath": "pages/statistic/index",
+        "text": "统计",
+        "iconPath": "images/tabbar/basics.png",
+        "selectedIconPath": "images/tabbar/basics_cur.png"
+      },
+      {
+        "pagePath": "pages/hot/index",
+        "text": "热门",
+        "iconPath": "images/tabbar/about.png",
+        "selectedIconPath": "images/tabbar/about_cur.png"
+      },
+      {
+        "pagePath": "pages/mostech/index",
+        "text": "蓝墨云",
+        "iconPath": "images/tabbar/component.png",
+        "selectedIconPath": "images/tabbar/component_cur.png"
+      },
+      {
+        "pagePath": "pages/aboutme/index",
+        "text": "我的收藏",
+        "iconPath": "images/tabbar/plugin.png",
+        "selectedIconPath": "images/tabbar/plugin_cur.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

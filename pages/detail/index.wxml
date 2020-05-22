@@ -1,0 +1,38 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">资源详情</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom {{isCard?'margin-top':''}}">
+	<view class='action'>
+		<text class='cuIcon-titles text-orange '></text> {{resource.type_name}}:{{resource.resourceName}}
+	</view>
+</view>
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+	<view class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar round lg" style="background-image:url('../../images/resource.jpg');"></view>
+				<view class="content flex-sub">
+					<view>{{resource.subjectName}}>>{{resource.courseName}}</view>
+					<view class="text-gray text-sm flex justify-between">
+						{{resource.uploadDate}}
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="text-content">
+			资源简介：{{resource.description}}
+		</view>
+		<view class="grid flex-sub padding-lr col-3 grid-square " wx:for="{{resource.appendix_list}}" wx:key="{{index}}">
+			<video wx:if="{{item.filetype=='mp4'}}" src="{{item.url}}" controls ></video>
+      <view style="width:100%;">
+      <navigator  class="text-blue" wx:if="{{item.filetype!='mp4'}}" url="{{item.url}}">
+      <text class="cuIcon-copy margin-lr-xs"></text>{{item.filename}}
+      </navigator>
+      </view>
+		</view>
+		<view class="text-red text-sm text-right padding" bindtap="addCollect">
+			<text class="cuIcon-messagefill margin-lr-xs"></text> 我要收藏
+		</view>
+	</view>  
+</view>

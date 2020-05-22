@@ -1,0 +1,8 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+	<view slot="backText">返回</view>
+	<view slot="content">数据统计分析</view>
+</cu-custom>
+<view class="container">
+	<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+<view class='cu-tabbar-height'></view>

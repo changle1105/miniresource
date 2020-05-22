@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottombar":"../../components/bottombar/bottombar",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

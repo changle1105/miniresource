@@ -1,0 +1,48 @@
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">资源列表</view>
+	</cu-custom>
+	<form>
+		<view class="cu-form-group margin-top">
+			<view class="title">资源名称：</view>
+			<input bindblur="handleTextInput" placeholder="请输入资源名称关键字"></input>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">学科种类：</view>
+			<picker bindchange="handleSubjectChange" value="{{subject_index}}" range="{{listSubject}}" range-key="subject_name">
+				<view class="picker">
+					{{subject_index?listSubject[subject_index].subject_name:'请选择'}}
+				</view>
+			</picker>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">课程或者文件夹：</view>
+			<picker bindchange="handleCourseChange" value="{{course_index}}" range="{{listCourse}}" range-key="course_name">
+				<view class="picker">
+					{{course_index?listCourse[course_index].course_name:'请选择'}}
+				</view>
+			</picker>
+		</view>
+	</form>
+	<view class="cu-bar bg-white solid-bottom">
+		<view class="action ">
+			<text class="cuIcon-card text-green "></text> 资源列表
+		</view>
+		<view class="action">
+			<button class="cu-btn bg-green shadow" bindtap="handleQuery">查询</button>
+		</view>
+	</view>
+
+	<view class="cu-list menu ">
+		<view class="cu-item " wx:for="{{list}}" wx:key="{{index}}">
+			<view class="content">
+				<text class="cuIcon-tagfill text-brown"></text>
+					<text class="text-grey" data-id="{{item.resourceId}}" bindtap="handleDetail">{{item.resourceName}}</text>
+			</view>
+			<view class="action">
+				<view class="cu-tag round bg-orange light">{{item.uploaderName}}</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>

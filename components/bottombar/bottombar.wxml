@@ -1,0 +1,33 @@
+<view class="cu-bar tabbar bg-black foot">
+	<view class="action text-green">
+		<navigator url="../../pages/homepage/index">
+			<view class="cuIcon-homefill"></view> 首页
+		</navigator> 
+	</view> 
+	<view class="action text-gray">
+		<navigator url="../../pages/statistic/index">
+			<view class="cuIcon-similar"></view> 统计
+		</navigator>
+	</view>
+	<view class="action text-gray add-action">
+		<navigator url="../../pages/query/index">
+			<button class="cu-btn cuIcon-search bg-green shadow"></button>
+			查询</navigator>
+	</view>
+	<view class="action text-gray">
+		<navigator url="../../pages/mostech/index">
+			<view class="cuIcon-mobile">
+				<view class="cu-tag badge">99</view>
+			</view>
+			蓝墨云
+		</navigator>
+	</view>
+	<view class="action text-gray">
+		<navigator url="pages/aboutme/index">
+			<view class="cuIcon-my">
+				<view class="cu-tag badge"></view>
+			</view>
+			我的
+		</navigator>
+	</view>
+</view>

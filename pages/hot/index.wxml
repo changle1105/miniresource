@@ -1,0 +1,21 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+	<view slot="backText">返回</view>
+	<view slot="content">热门排行</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-white nav text-center">
+	<view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{tablist}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+		<text class="cuIcon-upstagefill"></text> {{item.name}}
+	</view>
+</scroll-view>
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+	<view class="cu-item " wx:for="{{list}}" wx:key="{{index}}">
+		<navigator class="content" url="../detail/index?id={{item.resourceId}}" hover-class="none">
+			<text class="cuIcon-tagfill text-blue"></text>
+			<text class="text-blue">{{item.resourceName}}</text>
+		</navigator>
+		<view class="action">
+			<view class="cu-tag round bg-orange light">{{item.uploaderName}}</view>
+			<view class="cu-tag round bg-olive light">{{item.scanCount}}</view>
+		</view>
+	</view>
+</view>

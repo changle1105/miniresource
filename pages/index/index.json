@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "bottombar":"../../components/bottombar/bottombar"
+  }
+}
